@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiro Caribe – Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="g"></canvas>
+  <button id="mute" class="alt" title="Sonido">♪</button>
+
+  <div id="menu" class="scr on">
+    <h1>TIRO<br>CARIBE</h1>
+    <p>Mueve el mouse o el dedo para apuntar.<br><b>Disparo automático.</b></p>
+    <p>Recoge: <b>P</b> más disparos · <b>S</b> escudo · <b>♥</b> vida</p>
+    <label for="nick">TU APODO</label>
+    <input id="nick" maxlength="16" autocomplete="off" placeholder="3 a 16 letras o números">
+    <p id="nickErr" class="err"></p>
+    <button id="play" class="pink">▶ Jugar</button>
+    <h3>TOP 5 MUNDIAL</h3>
+    <ol id="rank0" class="rank"></ol>
+  </div>
+
+  <div id="over" class="scr">
+    <h2>GAME OVER</h2>
+    <div class="big" id="fs">0</div>
+    <p id="msg"></p>
+    <h3>TOP 5 MUNDIAL</h3>
+    <ol id="rank1" class="rank"></ol>
+    <button id="again" class="pink">↻ Otra vez</button>
+    <button id="retry" class="alt" style="display:none">Reintentar guardado</button>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
